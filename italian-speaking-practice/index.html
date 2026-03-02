@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratica Italiano - Conversazione</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Topic Selection Screen -->
+        <div id="topicScreen" class="screen active">
+            <h1>Pratica il tuo Italiano</h1>
+            <p class="subtitle">Scegli una modalità</p>
+            
+            <h3 style="margin-top: 30px; margin-bottom: 15px; color: #667eea;">💬 Conversazione</h3>
+            <div class="topic-grid">
+                <button class="topic-card" data-topic="sports" data-mode="conversation">
+                    <span class="icon">⚽</span>
+                    <h3>Sport</h3>
+                </button>
+                <button class="topic-card" data-topic="travel" data-mode="conversation">
+                    <span class="icon">✈️</span>
+                    <h3>Viaggi</h3>
+                </button>
+                <button class="topic-card" data-topic="identity" data-mode="conversation">
+                    <span class="icon">👤</span>
+                    <h3>Identità Personale</h3>
+                </button>
+                <button class="topic-card" data-topic="opinions" data-mode="conversation">
+                    <span class="icon">💭</span>
+                    <h3>Opinioni</h3>
+                </button>
+            </div>
+
+            <h3 style="margin-top: 40px; margin-bottom: 15px; color: #667eea;">📚 Esercizi di Grammatica</h3>
+            <div class="topic-grid">
+                <button class="topic-card" data-category="adjectives" data-mode="drills">
+                    <span class="icon">📝</span>
+                    <h3>Aggettivi</h3>
+                </button>
+                <button class="topic-card" data-category="articles" data-mode="drills">
+                    <span class="icon">📰</span>
+                    <h3>Articoli</h3>
+                </button>
+                <button class="topic-card" data-category="prepositions" data-mode="drills">
+                    <span class="icon">🔗</span>
+                    <h3>Preposizioni</h3>
+                </button>
+                <button class="topic-card" data-category="regular_verbs" data-mode="drills">
+                    <span class="icon">✍️</span>
+                    <h3>Verbi Regolari</h3>
+                </button>
+                <button class="topic-card" data-category="irregular_verbs" data-mode="drills">
+                    <span class="icon">⚡</span>
+                    <h3>Verbi Irregolari</h3>
+                </button>
+                <button class="topic-card" data-category="modal_verbs" data-mode="drills">
+                    <span class="icon">🎯</span>
+                    <h3>Verbi Modali</h3>
+                </button>
+            </div>
+        </div>
+
+        <!-- Difficulty Selection Screen -->
+        <div id="difficultyScreen" class="screen">
+            <h2>Scegli la difficoltà</h2>
+            <p class="subtitle">Questo determina il tempo per rispondere</p>
+            <div class="difficulty-grid">
+                <button class="difficulty-btn" data-difficulty="easy">
+                    <h3>Facile</h3>
+                    <p>30 secondi</p>
+                </button>
+                <button class="difficulty-btn" data-difficulty="medium">
+                    <h3>Medio</h3>
+                    <p>20 secondi</p>
+                </button>
+                <button class="difficulty-btn" data-difficulty="hard">
+                    <h3>Difficile</h3>
+                    <p>10 secondi</p>
+                </button>
+            </div>
+            
+            <div id="answerTypeSelection" style="margin-top: 30px;">
+                <p class="subtitle">Tipo di risposta</p>
+                <div class="difficulty-grid">
+                    <button class="difficulty-btn" data-answertype="short">
+                        <h3>Breve</h3>
+                        <p>Risposte rapide</p>
+                    </button>
+                    <button class="difficulty-btn" data-answertype="long">
+                        <h3>Elaborata</h3>
+                        <p>Risposte complete</p>
+                    </button>
+                    <button class="difficulty-btn" data-answertype="both">
+                        <h3>Entrambe</h3>
+                        <p>Miste</p>
+                    </button>
+                </div>
+            </div>
+            
+            <button id="backToTopics" class="back-btn">← Indietro</button>
+        </div>
+
+        <!-- Drills Category Selection Screen -->
+        <div id="drillsScreen" class="screen">
+            <h2 id="drillsCategoryTitle">Scegli un esercizio</h2>
+            <div id="drillsList" class="topic-grid"></div>
+            <button id="backToTopicsFromDrills" class="back-btn">← Indietro</button>
+        </div>
+
+        <!-- Practice Screen -->
+        <div id="practiceScreen" class="screen">
+            <div class="practice-header">
+                <button id="exitPractice" class="back-btn">← Esci</button>
+                <div class="timer-container">
+                    <div class="timer" id="timer">30</div>
+                </div>
+            </div>
+            
+            <!-- Rules box for drills -->
+            <div id="rulesBox" class="info-box hidden">
+                <h4>Regole:</h4>
+                <div id="rulesText"></div>
+            </div>
+            
+            <div class="flashcard">
+                <div class="question" id="question"></div>
+                <!-- Input for drills -->
+                <input type="text" id="drillInput" class="drill-input hidden" placeholder="Scrivi la risposta...">
+            </div>
+
+            <div class="controls">
+                <button id="rulesBtn" class="control-btn rules-btn hidden">📖 Regole</button>
+                <button id="hintBtn" class="control-btn hint-btn">💡 Suggerimento</button>
+                <button id="answerBtn" class="control-btn answer-btn">✓ Vedi Risposta</button>
+                <button id="checkBtn" class="control-btn check-btn hidden">✓ Controlla</button>
+                <button id="nextBtn" class="control-btn next-btn">Prossima →</button>
+            </div>
+
+            <div id="hintBox" class="info-box hidden">
+                <h4>Suggerimento:</h4>
+                <p id="hintText"></p>
+            </div>
+
+            <div id="answerBox" class="info-box hidden">
+                <h4 id="answerBoxTitle">Risposte possibili:</h4>
+                <div id="answerText"></div>
+            </div>
+            
+            <div id="feedbackBox" class="info-box hidden">
+                <h4 id="feedbackTitle">Risultato:</h4>
+                <p id="feedbackText"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="data/questions.js"></script>
+    <script src="data/drills-metadata.js"></script>
+    <script src="data/drills-data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

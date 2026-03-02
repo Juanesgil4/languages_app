@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Italian Practice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .success { color: #4caf50; }
+        .error { color: #f44336; }
+        h1 { color: #667eea; }
+        h2 { color: #333; margin-top: 0; }
+        pre {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 Test Page - Italian Practice Platform</h1>
+    
+    <div class="test-section">
+        <h2>1. Data Files Loading</h2>
+        <div id="filesTest">Testing...</div>
+    </div>
+    
+    <div class="test-section">
+        <h2>2. Questions Data</h2>
+        <div id="questionsTest">Testing...</div>
+    </div>
+    
+    <div class="test-section">
+        <h2>3. Drills Metadata</h2>
+        <div id="drillsMetaTest">Testing...</div>
+    </div>
+    
+    <div class="test-section">
+        <h2>4. Drills Data</h2>
+        <div id="drillsDataTest">Testing...</div>
+    </div>
+    
+    <div class="test-section">
+        <h2>5. Sample Content</h2>
+        <div id="sampleTest"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>✅ Next Steps</h2>
+        <p>If all tests pass, you can:</p>
+        <ol>
+            <li><a href="index.html">Open the main app</a></li>
+            <li>Add more questions to <code>data/questions.js</code></li>
+            <li>Add more drills to <code>data/drills-data.js</code></li>
+        </ol>
+    </div>
+
+    <script src="data/questions.js"></script>
+    <script src="data/drills-metadata.js"></script>
+    <script src="data/drills-data.js"></script>
+    <script>
+        // Test 1: Files loaded
+        const filesTest = document.getElementById('filesTest');
+        if (typeof questionsData !== 'undefined' && 
+            typeof drillsMetadata !== 'undefined' && 
+            typeof drillsData !== 'undefined') {
+            filesTest.innerHTML = '<span class="success">✓ All data files loaded successfully!</span>';
+        } else {
+            filesTest.innerHTML = '<span class="error">✗ Some files failed to load</span>';
+        }
+        
+        // Test 2: Questions structure
+        const questionsTest = document.getElementById('questionsTest');
+        try {
+            const topics = Object.keys(questionsData);
+            let html = `<span class="success">✓ Found ${topics.length} topics:</span><ul>`;
+            topics.forEach(topic => {
+                const count = questionsData[topic].length;
+                html += `<li><strong>${topic}</strong>: ${count} questions</li>`;
+            });
+            html += '</ul>';
+            questionsTest.innerHTML = html;
+        } catch (e) {
+            questionsTest.innerHTML = `<span class="error">✗ Error: ${e.message}</span>`;
+        }
+        
+        // Test 3: Drills metadata
+        const drillsMetaTest = document.getElementById('drillsMetaTest');
+        try {
+            const categories = drillsMetadata.categories;
+            let html = `<span class="success">✓ Found ${categories.length} categories:</span><ul>`;
+            categories.forEach(cat => {
+                html += `<li><strong>${cat.name}</strong>: ${cat.drills.length} drills</li>`;
+            });
+            html += '</ul>';
+            drillsMetaTest.innerHTML = html;
+        } catch (e) {
+            drillsMetaTest.innerHTML = `<span class="error">✗ Error: ${e.message}</span>`;
+        }
+        
+        // Test 4: Drills data
+        const drillsDataTest = document.getElementById('drillsDataTest');
+        try {
+            const drillIds = Object.keys(drillsData);
+            let html = `<span class="success">✓ Found ${drillIds.length} drills with data:</span><ul>`;
+            drillIds.forEach(id => {
+                const drill = drillsData[id];
+                html += `<li><strong>${id}</strong>: ${drill.title} (${drill.exercises.length} exercises)</li>`;
+            });
+            html += '</ul>';
+            drillsDataTest.innerHTML = html;
+        } catch (e) {
+            drillsDataTest.innerHTML = `<span class="error">✗ Error: ${e.message}</span>`;
+        }
+        
+        // Test 5: Sample content
+        const sampleTest = document.getElementById('sampleTest');
+        try {
+            const sampleQ = questionsData.sports[0];
+            const sampleD = drillsData['06_01'];
+            
+            let html = '<h3>Sample Question (Sports):</h3>';
+            html += `<pre>${JSON.stringify(sampleQ, null, 2)}</pre>`;
+            html += '<h3>Sample Drill (ESSERE):</h3>';
+            html += `<pre>Title: ${sampleD.title}\nExercises: ${sampleD.exercises.length}\nFirst exercise: ${JSON.stringify(sampleD.exercises[0], null, 2)}</pre>`;
+            
+            sampleTest.innerHTML = html;
+        } catch (e) {
+            sampleTest.innerHTML = `<span class="error">✗ Error: ${e.message}</span>`;
+        }
+    </script>
+</body>
+</html>
