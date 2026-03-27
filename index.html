@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pratica Italiano - Conversazione</title>
+    <title>Pratica Italiano — Conversazione</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <!-- Topic Selection Screen -->
         <div id="topicScreen" class="screen active">
-            <h1>Pratica il tuo Italiano</h1>
-            <p class="subtitle">Scegli una modalità</p>
+            <h1><span class="flag">Impara l'italiano</span>Pratica Italiana</h1>
+            <div class="flag-bar"><span></span><span></span><span></span></div>
+            <p class="subtitle">Scegli una modalità per iniziare</p>
             
-            <h3 style="margin-top: 30px; margin-bottom: 15px; color: #667eea;">💬 Conversazione</h3>
+            <div class="section-label">💬 Conversazione</div>
             <div class="topic-grid">
                 <button class="topic-card" data-topic="sports" data-mode="conversation">
                     <span class="icon">⚽</span>
@@ -33,7 +37,7 @@
                 </button>
             </div>
 
-            <h3 style="margin-top: 40px; margin-bottom: 15px; color: #667eea;">📚 Esercizi di Grammatica</h3>
+            <div class="section-label">📚 Grammatica</div>
             <div class="topic-grid">
                 <button class="topic-card" data-category="adjectives" data-mode="drills">
                     <span class="icon">📝</span>
@@ -58,6 +62,50 @@
                 <button class="topic-card" data-category="modal_verbs" data-mode="drills">
                     <span class="icon">🎯</span>
                     <h3>Verbi Modali</h3>
+                </button>
+                <button class="topic-card" data-category="reflexive_verbs" data-mode="drills">
+                    <span class="icon">🔄</span>
+                    <h3>Verbi Riflessivi</h3>
+                </button>
+                <button class="topic-card" data-category="past_tenses" data-mode="drills">
+                    <span class="icon">⏮️</span>
+                    <h3>Tempi Passati</h3>
+                </button>
+                <button class="topic-card" data-category="future_tense" data-mode="drills">
+                    <span class="icon">⏭️</span>
+                    <h3>Futuro</h3>
+                </button>
+                <button class="topic-card" data-category="imperativo" data-mode="drills">
+                    <span class="icon">❗</span>
+                    <h3>Imperativo</h3>
+                </button>
+                <button class="topic-card" data-category="condizionale" data-mode="drills">
+                    <span class="icon">🤔</span>
+                    <h3>Condizionale</h3>
+                </button>
+                <button class="topic-card" data-category="congiuntivo" data-mode="drills">
+                    <span class="icon">💭</span>
+                    <h3>Congiuntivo</h3>
+                </button>
+            </div>
+
+            <div class="section-label">🏆 Sfide</div>
+            <div class="topic-grid">
+                <button class="topic-card" data-challenge="ch_01" data-mode="challenge">
+                    <span class="icon">👗</span>
+                    <h3>Al Negozio</h3>
+                </button>
+                <button class="topic-card" data-challenge="ch_02" data-mode="challenge">
+                    <span class="icon">🏛️</span>
+                    <h3>Luoghi Storici</h3>
+                </button>
+                <button class="topic-card" data-challenge="ch_03" data-mode="challenge">
+                    <span class="icon">🛒</span>
+                    <h3>Al Mercato</h3>
+                </button>
+                <button class="topic-card" data-challenge="ch_04" data-mode="challenge">
+                    <span class="icon">🙋</span>
+                    <h3>Presentarsi</h3>
                 </button>
             </div>
         </div>
@@ -109,6 +157,42 @@
             <button id="backToTopicsFromDrills" class="back-btn">← Indietro</button>
         </div>
 
+        <!-- Challenge Practice Screen -->
+        <div id="challengeScreen" class="screen">
+            <div class="practice-header">
+                <button id="exitChallenge" class="back-btn">← Esci</button>
+                <div class="challenge-progress">
+                    <span id="challengeProgressText">1 / 20</span>
+                </div>
+            </div>
+
+            <div class="challenge-meta">
+                <div class="challenge-situation" id="challengeSituation"></div>
+                <div class="challenge-tags" id="challengeTags"></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="question" id="challengeQuestion"></div>
+                <input type="text" id="challengeInput" class="drill-input" placeholder="Scrivi la risposta...">
+            </div>
+
+            <div class="controls">
+                <button id="challengeHintBtn" class="control-btn hint-btn">💡 Suggerimento</button>
+                <button id="challengeCheckBtn" class="control-btn check-btn">✓ Controlla</button>
+                <button id="challengeNextBtn" class="control-btn next-btn">Prossima →</button>
+            </div>
+
+            <div id="challengeHintBox" class="info-box hidden">
+                <h4>Suggerimento:</h4>
+                <p id="challengeHintText"></p>
+            </div>
+
+            <div id="challengeFeedbackBox" class="info-box hidden">
+                <h4 id="challengeFeedbackTitle">Risultato:</h4>
+                <p id="challengeFeedbackText"></p>
+            </div>
+        </div>
+
         <!-- Practice Screen -->
         <div id="practiceScreen" class="screen">
             <div class="practice-header">
@@ -158,6 +242,13 @@
     <script src="data/questions.js"></script>
     <script src="data/drills-metadata.js"></script>
     <script src="data/drills-data.js"></script>
+    <script src="data/challenges-data.js"></script>
+    <script>
+        window.onerror = function(msg, src, line, col, err) {
+            document.body.innerHTML = '<div style="padding:30px;font-family:monospace;background:#fff;color:#c00;font-size:14px"><strong>JS Error:</strong><br>' + msg + '<br>File: ' + src + '<br>Line: ' + line + '</div>';
+            return false;
+        };
+    </script>
     <script src="app.js"></script>
 </body>
 </html>

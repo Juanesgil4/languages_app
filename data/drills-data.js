@@ -623,3 +623,387 @@ prendere, scrivere, leggere, vedere, mettere, vivere, credere, vendere, perdere,
         ]
     }
 };
+
+
+// ─── NEW DRILLS ───────────────────────────────────────────────────────────────
+
+drillsData["09_01"] = {
+    title: "Verbi Riflessivi al Presente",
+    rules: `**Pronomi riflessivi:**
+- io → mi
+- tu → ti
+- lui/lei → si
+- noi → ci
+- voi → vi
+- loro → si
+
+**Struttura:** pronome riflessivo + verbo coniugato
+- Mi sveglio alle 7
+- Ti chiami Marco?
+
+**Verbi comuni:** svegliarsi, alzarsi, lavarsi, vestirsi, pettinarsi, chiamarsi, sentirsi, divertirsi, riposarsi, addormentarsi, sedersi, arrabbiarsi, annoiarsi, preoccuparsi, ricordarsi`,
+    exercises: [
+        { q: "Io _____ alle 7 (svegliarsi)", a: "mi sveglio" },
+        { q: "Tu _____ tardi (alzarsi)", a: "ti alzi" },
+        { q: "Lei _____ Maria (chiamarsi)", a: "si chiama" },
+        { q: "Noi _____ le mani (lavarsi)", a: "ci laviamo" },
+        { q: "Voi _____ in fretta (vestirsi)", a: "vi vestite" },
+        { q: "Loro _____ i capelli (pettinarsi)", a: "si pettinano" },
+        { q: "Io _____ bene oggi (sentirsi)", a: "mi sento" },
+        { q: "Tu _____ molto (divertirsi)", a: "ti diverti" },
+        { q: "Marco _____ sul divano (riposarsi)", a: "si riposa" },
+        { q: "Noi _____ tardi (addormentarsi)", a: "ci addormentiamo" },
+        { q: "Voi _____ qui (sedersi)", a: "vi sedete" },
+        { q: "Loro _____ presto (alzarsi)", a: "si alzano" },
+        { q: "Io _____ Marco (chiamarsi)", a: "mi chiamo" },
+        { q: "Tu _____ male? (sentirsi)", a: "ti senti" },
+        { q: "Lei _____ ogni mattina (truccarsi)", a: "si trucca" },
+        { q: "Noi _____ molto (divertirsi)", a: "ci divertiamo" },
+        { q: "Voi _____ spesso (arrabbiarsi)", a: "vi arrabbiate" },
+        { q: "Loro _____ facilmente (annoiarsi)", a: "si annoiano" },
+        { q: "Io _____ di te (preoccuparsi)", a: "mi preoccupo" },
+        { q: "Tu _____ il suo nome? (ricordarsi)", a: "ti ricordi" }
+    ]
+};
+
+drillsData["10_01"] = {
+    title: "Passato Prossimo con AVERE",
+    rules: `**Formazione:** AVERE (presente) + participio passato
+
+**Participio passato:**
+- Verbi -ARE → -ATO: parlare → parlato
+- Verbi -ERE → -UTO: vendere → venduto
+- Verbi -IRE → -ITO: dormire → dormito
+
+**Irregolari comuni:**
+fare → fatto, dire → detto, scrivere → scritto, leggere → letto, vedere → visto, prendere → preso, mettere → messo, aprire → aperto, chiudere → chiuso, rispondere → risposto, chiedere → chiesto, perdere → perso, rompere → rotto, bere → bevuto
+
+**Truco:** Con AVERE il participio NON concorda con il soggetto`,
+    exercises: [
+        { q: "Io _____ la pizza (mangiare)", a: "ho mangiato" },
+        { q: "Tu _____ una lettera (scrivere)", a: "hai scritto" },
+        { q: "Lei _____ il libro (leggere)", a: "ha letto" },
+        { q: "Noi _____ un film (vedere)", a: "abbiamo visto" },
+        { q: "Voi _____ i compiti (fare)", a: "avete fatto" },
+        { q: "Loro _____ la verità (dire)", a: "hanno detto" },
+        { q: "Io _____ il caffè (prendere)", a: "ho preso" },
+        { q: "Tu _____ la porta (aprire)", a: "hai aperto" },
+        { q: "Marco _____ le chiavi (perdere)", a: "ha perso" },
+        { q: "Noi _____ la finestra (chiudere)", a: "abbiamo chiuso" },
+        { q: "Voi _____ alla domanda (rispondere)", a: "avete risposto" },
+        { q: "Loro _____ il vino (bere)", a: "hanno bevuto" },
+        { q: "Io _____ molto (lavorare)", a: "ho lavorato" },
+        { q: "Tu _____ il numero (chiedere)", a: "hai chiesto" },
+        { q: "Lei _____ il piatto (rompere)", a: "ha rotto" },
+        { q: "Noi _____ i biglietti (comprare)", a: "abbiamo comprato" },
+        { q: "Voi _____ la giacca (mettere)", a: "avete messo" },
+        { q: "Loro _____ una passeggiata (fare)", a: "hanno fatto" },
+        { q: "Io _____ italiano (studiare)", a: "ho studiato" },
+        { q: "Tu _____ la radio (ascoltare)", a: "hai ascoltato" }
+    ]
+};
+
+drillsData["10_02"] = {
+    title: "Passato Prossimo con ESSERE",
+    rules: `**Formazione:** ESSERE (presente) + participio passato
+
+**⚠️ Con ESSERE il participio CONCORDA con il soggetto:**
+- Masc. sing.: -o → sono andato
+- Fem. sing.: -a → sono andata
+- Masc. pl.: -i → siamo andati
+- Fem. pl.: -e → siamo andate
+
+**Verbi con ESSERE (movimento, cambio di stato):**
+andare, venire, arrivare, partire, uscire, entrare, tornare, restare, rimanere, nascere, morire, diventare, essere, stare, salire, scendere, cadere, crescere, piacere, sembrare`,
+    exercises: [
+        { q: "Io (m) _____ a Roma (andare)", a: "sono andato" },
+        { q: "Tu (f) _____ tardi (arrivare)", a: "sei arrivata" },
+        { q: "Lui _____ da Parigi (venire)", a: "è venuto" },
+        { q: "Noi (m) _____ alle 8 (partire)", a: "siamo partiti" },
+        { q: "Voi (f) _____ ieri sera (uscire)", a: "siete uscite" },
+        { q: "Loro (m) _____ in casa (entrare)", a: "sono entrati" },
+        { q: "Io (f) _____ a casa (tornare)", a: "sono tornata" },
+        { q: "Tu (m) _____ tutto il giorno (restare)", a: "sei restato" },
+        { q: "Lei _____ in Italia (rimanere)", a: "è rimasta" },
+        { q: "Noi (f) _____ in Italia (nascere)", a: "siamo nate" },
+        { q: "Voi (m) _____ medici (diventare)", a: "siete diventati" },
+        { q: "Loro (f) _____ stanche (essere)", a: "sono state" },
+        { q: "Io (m) _____ al terzo piano (salire)", a: "sono salito" },
+        { q: "Tu (f) _____ dal treno (scendere)", a: "sei scesa" },
+        { q: "Marco _____ dalla bici (cadere)", a: "è caduto" },
+        { q: "Noi (m) _____ molto (crescere)", a: "siamo cresciuti" },
+        { q: "Io (f) _____ in centro (andare)", a: "sono andata" },
+        { q: "Tu (m) _____ presto (arrivare)", a: "sei arrivato" },
+        { q: "Lei _____ dall'America (venire)", a: "è venuta" },
+        { q: "Noi (f) _____ stamattina (partire)", a: "siamo partite" }
+    ]
+};
+
+drillsData["11_01"] = {
+    title: "Imperfetto",
+    rules: `**Formazione:**
+- Verbi -ARE: parl-avo, -avi, -ava, -avamo, -avate, -avano
+- Verbi -ERE: legg-evo, -evi, -eva, -evamo, -evate, -evano
+- Verbi -IRE: dorm-ivo, -ivi, -iva, -ivamo, -ivate, -ivano
+
+**Irregolari:** essere → ero/eri/era/eravamo/eravate/erano, fare → facevo, dire → dicevo, bere → bevevo
+
+**Usi:**
+1. Azioni abituali nel passato: Da bambino giocavo sempre
+2. Descrizioni nel passato: La casa era grande
+3. Azioni in corso interrotte: Dormivo quando è arrivato
+4. Stati mentali/fisici passati: Avevo fame`,
+    exercises: [
+        { q: "Da bambino io _____ molto (giocare)", a: "giocavo" },
+        { q: "Tu _____ sempre in ritardo (arrivare)", a: "arrivavi" },
+        { q: "Lei _____ a Milano (abitare)", a: "abitava" },
+        { q: "Noi _____ ogni domenica (mangiare)", a: "mangiavamo" },
+        { q: "Voi _____ la TV la sera (guardare)", a: "guardavate" },
+        { q: "Loro _____ italiano a scuola (studiare)", a: "studiavano" },
+        { q: "Io _____ il giornale ogni mattina (leggere)", a: "leggevo" },
+        { q: "Tu _____ molto bene (scrivere)", a: "scrivevi" },
+        { q: "Marco _____ in centro (vivere)", a: "viveva" },
+        { q: "Noi _____ felici (essere)", a: "eravamo" },
+        { q: "Voi _____ sport ogni giorno (fare)", a: "facevate" },
+        { q: "Loro _____ in campagna (abitare)", a: "abitavano" },
+        { q: "Io _____ molto da giovane (dormire)", a: "dormivo" },
+        { q: "Tu _____ sempre la verità (dire)", a: "dicevi" },
+        { q: "Lei _____ il caffè ogni mattina (bere)", a: "beveva" },
+        { q: "Io _____ spesso al mare (andare)", a: "andavo" },
+        { q: "Tu _____ con gli amici (uscire)", a: "uscivi" },
+        { q: "Noi _____ la pizza il venerdì (mangiare)", a: "mangiavamo" },
+        { q: "Loro _____ bambini (essere)", a: "erano" },
+        { q: "Io _____ 10 anni (avere)", a: "avevo" }
+    ]
+};
+
+drillsData["12_01"] = {
+    title: "Futuro Semplice",
+    rules: `**Formazione:**
+- Verbi -ARE: parler-ò, -ai, -à, -emo, -ete, -anno
+- Verbi -ERE: legger-ò, -ai, -à, -emo, -ete, -anno
+- Verbi -IRE: dormir-ò, -ai, -à, -emo, -ete, -anno
+
+**Irregolari:** essere → sarò, avere → avrò, fare → farò, andare → andrò, venire → verrò, dovere → dovrò, potere → potrò, volere → vorrò, sapere → saprò, vedere → vedrò, vivere → vivrò
+
+**Usi:**
+1. Azioni future: Domani andrò al mare
+2. Promesse: Ti chiamerò
+3. Previsioni: Farà bello domani
+4. Supposizioni: Avrà 30 anni`,
+    exercises: [
+        { q: "Domani io _____ a Roma (andare)", a: "andrò" },
+        { q: "Tu _____ alle 8 (arrivare)", a: "arriverai" },
+        { q: "Lei _____ il libro (leggere)", a: "leggerà" },
+        { q: "Noi _____ insieme (mangiare)", a: "mangeremo" },
+        { q: "Voi _____ la TV (guardare)", a: "guarderete" },
+        { q: "Loro _____ italiano (studiare)", a: "studieranno" },
+        { q: "Io _____ una email (scrivere)", a: "scriverò" },
+        { q: "Tu _____ il film (vedere)", a: "vedrai" },
+        { q: "Marco _____ molto (lavorare)", a: "lavorerà" },
+        { q: "Noi _____ felici (essere)", a: "saremo" },
+        { q: "Voi _____ tempo (avere)", a: "avrete" },
+        { q: "Loro _____ sport (fare)", a: "faranno" },
+        { q: "Io _____ da te (venire)", a: "verrò" },
+        { q: "Tu _____ studiare (dovere)", a: "dovrai" },
+        { q: "Lei _____ venire (potere)", a: "potrà" },
+        { q: "Noi _____ partire (volere)", a: "vorremo" },
+        { q: "Voi _____ la risposta (sapere)", a: "saprete" },
+        { q: "Io _____ il caffè (bere)", a: "berrò" },
+        { q: "Tu _____ a casa (restare)", a: "resterai" },
+        { q: "Marco _____ medico (diventare)", a: "diventerà" }
+    ]
+};
+
+drillsData["03_02"] = {
+    title: "Preposizioni Articolate",
+    rules: `**Preposizione + Articolo = Preposizione Articolata**
+
+|    | il  | lo    | la    | l'    | i   | gli   | le    |
+|----|-----|-------|-------|-------|-----|-------|-------|
+| di | del | dello | della | dell' | dei | degli | delle |
+| a  | al  | allo  | alla  | all'  | ai  | agli  | alle  |
+| da | dal | dallo | dalla | dall' | dai | dagli | dalle |
+| in | nel | nello | nella | nell' | nei | negli | nelle |
+| su | sul | sullo | sulla | sull' | sui | sugli | sulle |
+
+**CON e PER NON si contraggono:** con il, per la, tra i
+**Truco:** Segui il pattern dell'articolo: il→del/al/dal/nel/sul, lo→dello/allo..., la→della/alla...`,
+    exercises: [
+        { q: "di + il libro = _____ libro", a: "del" },
+        { q: "di + la casa = _____ casa", a: "della" },
+        { q: "di + lo studente = _____ studente", a: "dello" },
+        { q: "di + l'amico = _____ amico", a: "dell'" },
+        { q: "di + i ragazzi = _____ ragazzi", a: "dei" },
+        { q: "di + gli studenti = _____ studenti", a: "degli" },
+        { q: "di + le ragazze = _____ ragazze", a: "delle" },
+        { q: "a + il cinema = _____ cinema", a: "al" },
+        { q: "a + la stazione = _____ stazione", a: "alla" },
+        { q: "a + lo stadio = _____ stadio", a: "allo" },
+        { q: "a + l'università = _____ università", a: "all'" },
+        { q: "a + i bambini = _____ bambini", a: "ai" },
+        { q: "a + gli amici = _____ amici", a: "agli" },
+        { q: "a + le persone = _____ persone", a: "alle" },
+        { q: "da + il medico = _____ medico", a: "dal" },
+        { q: "da + la nonna = _____ nonna", a: "dalla" },
+        { q: "in + il parco = _____ parco", a: "nel" },
+        { q: "in + la cucina = _____ cucina", a: "nella" },
+        { q: "su + il tavolo = _____ tavolo", a: "sul" },
+        { q: "su + la sedia = _____ sedia", a: "sulla" }
+    ]
+};
+
+drillsData["11_02"] = {
+    title: "Passato Prossimo vs Imperfetto",
+    rules: `**IMPERFETTO** → azione abituale, descrizione, sfondo
+- Da bambino giocavo sempre (solevo giocare)
+- Mentre dormivo... (azione in corso)
+- Segnali: sempre, spesso, di solito, ogni giorno, da bambino, mentre
+
+**PASSATO PROSSIMO** → azione completata, evento puntuale
+- Ieri ho mangiato la pizza (evento unico)
+- All'improvviso è arrivato (interruzione)
+- Segnali: ieri, stamattina, una volta, l'anno scorso, poi, finalmente
+
+**Schema classico:** Imperfetto (sfondo) + Passato Prossimo (evento)
+→ Dormivo quando è arrivato`,
+    exercises: [
+        { q: "Ieri io _____ la pizza (mangiare)", a: "ho mangiato" },
+        { q: "Da bambino io _____ sempre la pizza (mangiare)", a: "mangiavo" },
+        { q: "Stamattina lei _____ tardi (arrivare)", a: "è arrivata" },
+        { q: "Di solito lei _____ in orario (arrivare)", a: "arrivava" },
+        { q: "L'anno scorso noi _____ in Italia (andare)", a: "siamo andati" },
+        { q: "Ogni estate noi _____ in Italia (andare)", a: "andavamo" },
+        { q: "Ieri tu _____ con Marco (parlare)", a: "hai parlato" },
+        { q: "Quando ero giovane, tu _____ sempre con Marco (parlare)", a: "parlavi" },
+        { q: "Mentre lei _____ (leggere), lui è entrato", a: "leggeva" },
+        { q: "Stamattina io _____ il caffè (bere)", a: "ho bevuto" },
+        { q: "Di solito io _____ il tè (bere)", a: "bevevo" },
+        { q: "Ieri Marco _____ un film (vedere)", a: "ha visto" },
+        { q: "Da piccolo Marco _____ molti film (vedere)", a: "vedeva" },
+        { q: "Ieri sera loro _____ al ristorante (cenare)", a: "hanno cenato" },
+        { q: "Ogni venerdì loro _____ al ristorante (cenare)", a: "cenavano" },
+        { q: "Mentre io _____ (camminare), ha iniziato a piovere", a: "camminavo" },
+        { q: "Ieri Marco _____ tardi (tornare)", a: "è tornato" },
+        { q: "Di solito Marco _____ presto (tornare)", a: "tornava" },
+        { q: "Stamattina tu _____ presto (svegliarsi)", a: "ti sei svegliato" },
+        { q: "Da bambino tu _____ sempre presto (svegliarsi)", a: "ti svegliavi" }
+    ]
+};
+
+drillsData["13_01"] = {
+    title: "Imperativo",
+    rules: `**Imperativo informale (tu/noi/voi):**
+- -ARE: parla! / parliamo! / parlate!
+- -ERE: prendi! / prendiamo! / prendete!
+- -IRE: dormi! / dormiamo! / dormite!
+- -IRE (isc): finisci! / finiamo! / finite!
+
+**Imperativo formale (Lei):**
+- -ARE → -i: parli!
+- -ERE/-IRE → -a: prenda!, dorma!
+
+**Irregolari:** andare→va'!, fare→fa'!, dire→di'!, stare→sta'!, dare→da'!, venire→vieni!, uscire→esci!
+
+**Negativo TU:** NON + infinito → Non parlare!
+**Negativo VOI/LEI:** NON + imperativo → Non parlate! / Non parli!`,
+    exercises: [
+        { q: "_____ (parlare, tu) più piano!", a: "Parla" },
+        { q: "_____ (mangiare, voi) la verdura!", a: "Mangiate" },
+        { q: "_____ (ascoltare, tu) bene!", a: "Ascolta" },
+        { q: "_____ (aspettare, Lei) un momento!", a: "Aspetti" },
+        { q: "_____ (venire, tu) qui!", a: "Vieni" },
+        { q: "_____ (andare, voi) a casa!", a: "Andate" },
+        { q: "_____ (fare, tu) i compiti!", a: "Fai" },
+        { q: "_____ (dire, Lei) la verità!", a: "Dica" },
+        { q: "_____ (essere, tu) gentile!", a: "Sii" },
+        { q: "_____ (avere, voi) pazienza!", a: "Abbiate" },
+        { q: "_____ (prendere, tu) l'ombrello!", a: "Prendi" },
+        { q: "_____ (scrivere, Lei) il suo nome!", a: "Scriva" },
+        { q: "_____ (aprire, tu) la finestra!", a: "Apri" },
+        { q: "_____ (finire, tu) il lavoro!", a: "Finisci" },
+        { q: "_____ (uscire, Lei) subito!", a: "Esca" },
+        { q: "Non _____ (parlare, tu) così!", a: "parlare" },
+        { q: "Non _____ (andare, tu) via!", a: "andare" },
+        { q: "_____ (alzarsi, tu) subito!", a: "Alzati" },
+        { q: "_____ (sedersi, Lei) pure!", a: "Si sieda" },
+        { q: "_____ (sbrigarsi, tu) che è tardi!", a: "Sbrigati" }
+    ]
+};
+
+drillsData["14_01"] = {
+    title: "Condizionale Presente",
+    rules: `**Formazione:** stessa radice del futuro + -rei, -resti, -rebbe, -remmo, -reste, -rebbero
+
+**Irregolari:** essere→sarei, avere→avrei, fare→farei, andare→andrei, venire→verrei, dovere→dovrei, potere→potrei, volere→vorrei, sapere→saprei, vedere→vedrei
+
+**Usi principali:**
+1. Desideri cortesi: Vorrei un caffè
+2. Ipotesi: Con più soldi, viaggerei
+3. Consiglio: Dovresti studiare
+4. Possibilità: Potrebbe essere vero
+
+**Le 3 forme più utili:** VORREI · POTREI · DOVREI`,
+    exercises: [
+        { q: "Io _____ un caffè (volere)", a: "vorrei" },
+        { q: "Tu _____ venire? (potere)", a: "potresti" },
+        { q: "Lei _____ studiare di più (dovere)", a: "dovrebbe" },
+        { q: "Noi _____ andare al mare (volere)", a: "vorremmo" },
+        { q: "Voi _____ aspettare (potere)", a: "potreste" },
+        { q: "Loro _____ partire domani (dovere)", a: "dovrebbero" },
+        { q: "Io _____ felice (essere)", a: "sarei" },
+        { q: "Tu _____ ragione (avere)", a: "avresti" },
+        { q: "Marco _____ una torta (fare)", a: "farebbe" },
+        { q: "Noi _____ in Italia (vivere)", a: "vivremmo" },
+        { q: "Io _____ un'acqua, per favore (volere)", a: "vorrei" },
+        { q: "Tu _____ aiutarmi? (potere)", a: "potresti" },
+        { q: "Marco _____ lavorare meno (dovere)", a: "dovrebbe" },
+        { q: "Noi _____ a Parigi (andare)", a: "andremmo" },
+        { q: "Io _____ un'informazione (volere)", a: "vorrei" },
+        { q: "Tu _____ ripetere? (potere)", a: "potresti" },
+        { q: "Io _____ in campagna (vivere)", a: "vivrei" },
+        { q: "Noi _____ una pausa (fare)", a: "faremmo" },
+        { q: "Io _____ tanto viaggiare (volere)", a: "vorrei" },
+        { q: "Tu _____ venire stasera? (potere)", a: "potresti" }
+    ]
+};
+
+drillsData["15_01"] = {
+    title: "Congiuntivo Presente",
+    rules: `**Formazione:**
+- -ARE: parli, parli, parli, parliamo, parliate, parlino
+- -ERE: prenda, prenda, prenda, prendiamo, prendiate, prendano
+- -IRE: dorma, dorma, dorma, dormiamo, dormiate, dormano
+
+**Irregolari:** essere→sia, avere→abbia, andare→vada, fare→faccia, venire→venga, dire→dica, potere→possa, volere→voglia, dovere→debba, sapere→sappia
+
+**Usi — sempre dopo "che" con cambio di soggetto:**
+- Penso che sia vero
+- Voglio che tu venga
+- È importante che tu sappia
+- Spero che stia bene
+
+**Espressioni chiave:** penso/credo/spero che, voglio che, è importante/necessario/possibile che, bisogna che, sono contento che`,
+    exercises: [
+        { q: "Penso che lui _____ italiano (essere)", a: "sia" },
+        { q: "Voglio che tu _____ (venire)", a: "venga" },
+        { q: "Spero che lei _____ bene (stare)", a: "stia" },
+        { q: "È importante che noi _____ (studiare)", a: "studiamo" },
+        { q: "Bisogna che voi _____ (ascoltare)", a: "ascoltiate" },
+        { q: "Credo che loro _____ ragione (avere)", a: "abbiano" },
+        { q: "Voglio che tu _____ la verità (dire)", a: "dica" },
+        { q: "È necessario che lui _____ (partire)", a: "parta" },
+        { q: "Penso che lei _____ (lavorare)", a: "lavori" },
+        { q: "È possibile che lui _____ (venire)", a: "venga" },
+        { q: "Credo che tu _____ sbagliato (essere)", a: "sia" },
+        { q: "Bisogna che loro _____ (capire)", a: "capiscano" },
+        { q: "Penso che noi _____ bene (fare)", a: "facciamo" },
+        { q: "Voglio che lui _____ (smettere)", a: "smetta" },
+        { q: "È necessario che tu _____ (dormire) di più", a: "dorma" },
+        { q: "Spero che loro _____ felici (essere)", a: "siano" },
+        { q: "Bisogna che lui _____ dal medico (andare)", a: "vada" },
+        { q: "Voglio che lei _____ (riposarsi)", a: "si riposi" },
+        { q: "Sebbene lui _____ stanco, lavora (essere)", a: "sia" },
+        { q: "Prima che tu _____, dimmi tutto (andare)", a: "vada" }
+    ]
+};

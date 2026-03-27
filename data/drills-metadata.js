@@ -72,6 +72,57 @@ const drillsMetadata = {
                 { id: "07_03", file: "07_03_dovere", name: "DOVERE" },
                 { id: "07_04", file: "07_04_sapere", name: "SAPERE" }
             ]
+        },
+        {
+            id: "reflexive_verbs",
+            name: "Verbi Riflessivi",
+            icon: "🔄",
+            drills: [
+                { id: "09_01", file: "09_01_verbi_riflessivi", name: "Presente Riflessivo" }
+            ]
+        },
+        {
+            id: "past_tenses",
+            name: "Tempi Passati",
+            icon: "⏮️",
+            drills: [
+                { id: "10_01", file: "10_01_passato_prossimo_avere", name: "Passato Prossimo con AVERE" },
+                { id: "10_02", file: "10_02_passato_prossimo_essere", name: "Passato Prossimo con ESSERE" },
+                { id: "11_01", file: "11_01_imperfetto", name: "Imperfetto" },
+                { id: "11_02", file: "11_02_passato_prossimo_vs_imperfetto", name: "Passato Prossimo vs Imperfetto" }
+            ]
+        },
+        {
+            id: "future_tense",
+            name: "Futuro",
+            icon: "⏭️",
+            drills: [
+                { id: "12_01", file: "12_01_futuro_semplice", name: "Futuro Semplice" }
+            ]
+        },
+        {
+            id: "imperativo",
+            name: "Imperativo",
+            icon: "❗",
+            drills: [
+                { id: "13_01", file: "13_01_imperativo", name: "Imperativo" }
+            ]
+        },
+        {
+            id: "condizionale",
+            name: "Condizionale",
+            icon: "🤔",
+            drills: [
+                { id: "14_01", file: "14_01_condizionale_presente", name: "Condizionale Presente" }
+            ]
+        },
+        {
+            id: "congiuntivo",
+            name: "Congiuntivo",
+            icon: "💭",
+            drills: [
+                { id: "15_01", file: "15_01_congiuntivo_presente", name: "Congiuntivo Presente" }
+            ]
         }
     ]
 };
